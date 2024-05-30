@@ -17,6 +17,7 @@ func addSeed():
 		Global.substractSeeds()
 		var fruitInstance = fruit.instantiate()
 		fruitInstance.position = player.position
+		print('wewe')
 		add_child(fruitInstance)
 	else:
 		print('oh no fruits :(')
