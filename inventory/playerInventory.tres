@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=4 format=3 uid="uid://cpeoalurmayub"]
+
+[ext_resource type="Resource" uid="uid://b8qrhyrgjuaxi" path="res://inventory/items/apple.tres" id="1_cwh4e"]
+[ext_resource type="Script" path="res://scripts/inventory.gd" id="2_dyr8t"]
+[ext_resource type="Resource" uid="uid://c24yf2ir7a82" path="res://inventory/items/apple_seed.tres" id="2_r3ici"]
+
+[resource]
+script = ExtResource("2_dyr8t")
+items = [ExtResource("1_cwh4e"), ExtResource("2_r3ici"), null, null, null, null, null, null, null, null]

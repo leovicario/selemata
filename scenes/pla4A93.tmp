@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://xt0n5jpsg3de"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_er7w2"]
+[ext_resource type="Texture2D" uid="uid://4v71wj22lor0" path="res://assets/characters/maincebolla-sheet.png" id="2_ctase"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l42hu"]
+atlas = ExtResource("2_ctase")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwhoa"]
+atlas = ExtResource("2_ctase")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duql3"]
+atlas = ExtResource("2_ctase")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64xkc"]
+atlas = ExtResource("2_ctase")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouok1"]
+atlas = ExtResource("2_ctase")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cju12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l42hu")
+}],
+"loop": true,
+"name": &"left_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwhoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duql3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64xkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouok1")
+}],
+"loop": true,
+"name": &"left_moving",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"right_idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"right_moving",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5ext"]
+size = Vector2(10, 13.5)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_er7w2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cju12")
+animation = &"right_moving"
+autoplay = "left_idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_v5ext")

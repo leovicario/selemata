@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://drxo6n1g7crg3"]
+
+[ext_resource type="Script" path="res://scripts/menubar.gd" id="1_pnkwk"]
+
+[node name="MenuBar" type="MenuBar"]
+custom_minimum_size = Vector2(0, 32)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 10
+flat = true
+script = ExtResource("1_pnkwk")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 31.0
+tooltip_text = "pepoino?"
+text = "Apples"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_right = 130.0
+offset_bottom = 31.0
+tooltip_text = "pepoino?"
+text = "Seeds"

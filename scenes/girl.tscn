@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp1w0yv3emetk"]
+
+[ext_resource type="Texture2D" uid="uid://bk25t30b3nowu" path="res://assets/spr_anna.png" id="1_8q1os"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86nf7"]
+size = Vector2(9, 16)
+
+[node name="girl" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8q1os")
+region_enabled = true
+region_rect = Rect2(0, 8, 15.3, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_86nf7")
